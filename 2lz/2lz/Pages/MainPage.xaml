@@ -26,6 +26,11 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
+            <Button
+                Text="PushSender"
+                Clicked="OnPushSenderButton_Clicked"
+                HorizontalOptions="Center"/>
+
             <Button                
                 Text="Open git page"                
                 Clicked="OnGitLinkButton_Clicked"

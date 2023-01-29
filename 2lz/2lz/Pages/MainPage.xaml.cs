@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using _2lz.Pages;
 
 namespace _2lz;
 
@@ -21,5 +22,10 @@ public partial class MainPage : ContentPage
         {
             Debug.WriteLine(ex);
         }
+    }
+
+    private async void OnPushSenderButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PushSenderPage());
     }
 }
