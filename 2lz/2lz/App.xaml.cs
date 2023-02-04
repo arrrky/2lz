@@ -16,13 +16,13 @@ public partial class App : Application
     private void SetWindow()
     {        
         // https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/windows?view=net-maui-7.0#mac-catalyst
-        // Разобраться, как реализовать + по возможности объединить с WINDOWS логикой
+        // TODO
     }
 
 #if WINDOWS    
 
-    // DeviceDisplay.Current.MainDisplayInfo по какой-то причине не работает (все поля и свойства нулевые)
-    // Поэтому пока константы - разобраться
+    // DeviceDisplay.Current.MainDisplayInfo doesn't work for some reason (all properties and field are zero)
+    // WTF?
     private const int WINDOW_HEIGHT = 700;
     private const int WINDOW_WIDTH = 500;
 
