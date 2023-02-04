@@ -3,12 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:_2lz"
              x:Class="_2lz.App">
+
     <Application.Resources>
+
         <ResourceDictionary>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <x:Double x:Key="fontSize">22</x:Double>
+
+            <Color x:Key="backgroundColor">#FF2D2D30</Color>
+
+            <Style x:Key="baseGridStyle" TargetType="Grid">
+                <Setter Property="RowSpacing" Value="10"/>
+                <Setter Property="ColumnSpacing" Value="10"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+
+            <Style x:Key="infoLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource fontSize}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+
+            <Style x:Key="baseButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="{StaticResource fontSize}"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+            </Style>
+
+            <Style x:Key="mainPageButtonStyle" BasedOn="{StaticResource baseButtonStyle}" TargetType="Button">
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="WidthRequest" Value="200"/>
+            </Style>
+
         </ResourceDictionary>
+        
     </Application.Resources>
+    
 </Application>
