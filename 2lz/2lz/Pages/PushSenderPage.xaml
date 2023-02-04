@@ -2,11 +2,101 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="_2lz.Pages.PushSenderPage"
-             Title="PushSender">
-    <VerticalStackLayout>
+             Title="PushSender"
+             BackgroundColor="{StaticResource backgroundColor}">
+
+    <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*" Style="{StaticResource baseGridStyle}">
+
+        <!-- ROW 0 -->
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="App ID"
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Picker
+            Grid.Row="0" 
+            Grid.Column="1"/>
+
+        <Entry 
+            Grid.Row="0" 
+            Grid.Column="2"/>
+
+        <!-- ROW 1-->
+
         <Label 
-            Text="PushSender"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            Grid.Row="1" 
+            Grid.Column="0" 
+            Text="API token" 
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Entry 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2"/>
+
+        <!-- ROW 2-->
+
+        <Label
+            Grid.Row="2" 
+            Grid.Column="0" 
+            Text="Profile ID" 
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Entry 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2"/>
+
+        <!-- ROW 3-->
+
+        <Label 
+            Grid.Row="3" 
+            Grid.Column="0" 
+            Text="Server" 
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Picker 
+            Grid.Row="3" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2"/>
+
+        <!-- ROW 4-->
+
+        <Label
+            Grid.Row="4" 
+            Grid.Column="0" 
+            Text="Message" 
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Entry 
+            Grid.Row="4" 
+            Grid.Column="1"
+            Grid.ColumnSpan="2"/>
+
+        <!-- ROW 5-->
+
+        <Label 
+            Grid.Row="5" 
+            Grid.Column="0" 
+            Text="Response" 
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Entry 
+            Grid.Row="5" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="2"/>
+
+        <!-- ROW 6-->
+
+        <Button 
+            Grid.Row="6" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="3" 
+            Text="Send" 
+            Style="{StaticResource baseButtonStyle}"/>
+
+    </Grid>
+
 </ContentPage>
