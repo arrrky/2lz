@@ -95,7 +95,8 @@
             Grid.Column="0" 
             Grid.ColumnSpan="3" 
             Text="Send" 
-            Style="{StaticResource baseButtonStyle}"/>
+            Style="{StaticResource baseButtonStyle}"
+            Clicked="OnSendButton_Clicked"/>
 
     </Grid>
 
