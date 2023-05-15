@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_2lz.Pages.PushSender.AddServerPage">
+    
+    <Grid RowDefinitions="*,*" ColumnDefinitions="*,*,*,*" Style="{StaticResource baseGridStyle}">
+
+        <!-- ROW 0 - Server name -->
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Text="Server name"
+            Style="{StaticResource infoLabelStyle}"/>
+
+        <Entry 
+            Grid.Row="0" 
+            Grid.Column="2" />        
+
+        <!-- ROW 1 - Add button -->
+
+        <Button 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="4" 
+            Text="Add" 
+            Style="{StaticResource baseButtonStyle}"/>
+
+
+    </Grid>
+</ContentPage>

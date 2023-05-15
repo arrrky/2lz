@@ -5,9 +5,9 @@
              Title="PushSender"
              BackgroundColor="{StaticResource backgroundColor}">
 
-    <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*" Style="{StaticResource baseGridStyle}">
+    <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*" Style="{StaticResource baseGridStyle}">
 
-        <!-- ROW 0 -->
+        <!-- ROW 0 - App ID -->
 
         <Label
             Grid.Row="0"
@@ -15,28 +15,35 @@
             Text="App ID"
             Style="{StaticResource infoLabelStyle}"/>
 
-        <Picker
+        <Button 
             Grid.Row="0" 
-            Grid.Column="1"/>
+            Grid.Column="1"             
+            Text="Add app" 
+            Style="{StaticResource baseButtonStyle}"
+            Clicked="OnAddAppButton_Clicked"/>
 
-        <Entry 
+        <Picker
             Grid.Row="0" 
             Grid.Column="2"/>
 
-        <!-- ROW 1-->
+        <Entry 
+            Grid.Row="0" 
+            Grid.Column="3"/>
+
+        <!-- ROW 1 - API token -->
 
         <Label 
             Grid.Row="1" 
-            Grid.Column="0" 
+            Grid.Column="0"            
             Text="API token" 
             Style="{StaticResource infoLabelStyle}"/>
 
         <Entry 
             Grid.Row="1" 
             Grid.Column="1" 
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="3"/>
 
-        <!-- ROW 2-->
+        <!-- ROW 2 - Profile ID -->
 
         <Label
             Grid.Row="2" 
@@ -47,9 +54,9 @@
         <Entry 
             Grid.Row="2" 
             Grid.Column="1" 
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="3"/>
 
-        <!-- ROW 3-->
+        <!-- ROW 3 -Server -->
 
         <Label 
             Grid.Row="3" 
@@ -57,12 +64,19 @@
             Text="Server" 
             Style="{StaticResource infoLabelStyle}"/>
 
+        <Button 
+            Grid.Row="3" 
+            Grid.Column="1"             
+            Text="Add server" 
+            Style="{StaticResource baseButtonStyle}"
+            Clicked="OnAddServerButton_Clicked"/>
+
         <Picker 
             Grid.Row="3" 
-            Grid.Column="1" 
+            Grid.Column="2" 
             Grid.ColumnSpan="2"/>
 
-        <!-- ROW 4-->
+        <!-- ROW 4 - Message -->
 
         <Label
             Grid.Row="4" 
@@ -73,9 +87,9 @@
         <Entry 
             Grid.Row="4" 
             Grid.Column="1"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="3"/>
 
-        <!-- ROW 5-->
+        <!-- ROW 5 - Response -->
 
         <Label 
             Grid.Row="5" 
@@ -86,18 +100,18 @@
         <Entry 
             Grid.Row="5" 
             Grid.Column="1" 
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="3"/>
 
-        <!-- ROW 6-->
+        <!-- ROW 6 - SendButton -->
 
         <Button 
             Grid.Row="6" 
             Grid.Column="0" 
-            Grid.ColumnSpan="3" 
+            Grid.ColumnSpan="4" 
             Text="Send" 
             Style="{StaticResource baseButtonStyle}"
             Clicked="OnSendButton_Clicked"/>
 
-    </Grid>
+    </Grid>    
 
 </ContentPage>

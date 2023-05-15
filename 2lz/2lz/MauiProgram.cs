@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using _2lz.PushSender;
 using _2lz.Pages;
+using _2lz.Pages.PushSender;
 
 namespace _2lz;
 
@@ -36,6 +37,8 @@ public static class MauiProgram
     public static MauiAppBuilder RegisterAppPages(this MauiAppBuilder builder)
     {
         builder.Services.AddTransient<PushSenderPage>();
+        builder.Services.AddTransient<AddAppPage>();
+        builder.Services.AddTransient<AddServerPage>();
         return builder;
     }
 }
